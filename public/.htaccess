@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /osha-php/public/
+
+### Canonicalize codeigniter URLs
+
+# Removes trailing slashes (prevents SEO duplicate content issues)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ $1 [L,R=301]
+
+# Checks to see if the user is attempting to access a valid file,
+# such as an image or css document, if this isn't true it sends the
+# request to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
