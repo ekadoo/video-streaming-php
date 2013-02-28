@@ -3,7 +3,7 @@ require '../vendor/autoload.php';
 require '../lib/cloudfront.php';
 
 define(KEY_PAIR_ID, 'APKAJSJGP254DGRLS4QQ');
-define(BASE_PATH, '/osha-php/public');
+define(BASE_PATH, '');
 
 $privateKeyName = "pk-" . KEY_PAIR_ID . ".pem";
 $privateKeyPath = realpath("../config/" . $privateKeyName);

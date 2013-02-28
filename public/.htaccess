@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteBase /osha-php/public/
+RewriteBase /
 
 ### Canonicalize codeigniter URLs
 
